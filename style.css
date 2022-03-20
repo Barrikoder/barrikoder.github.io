@@ -78,35 +78,42 @@ a:hover {
 /** MENU */
 
 #logo {
-  margin: auto;
   width: 202px;
   padding: 24px 0px 24px 0px;
   font-size: 16px;
   color: #ffffff;
-  display: flex;
-  justify-content: center;
-  float: left;
+  transition: all 0.3s ease;
+  height: 75px;
 }
 
-#menu {
-  margin: 16px auto;
-  width: 50%;
-  padding: 24px 0px 24px 0px;
-  background-color: #ffffff;
-  font-size: 16px;
-  color: black;
-  display: flex;
-  justify-content: center;
-  float: right;
+#logo:hover {
+  width: 214px;
+  cursor: pointer;
+}
+
+#logo svg {
+  fill: black;
+  width: 100% !important;
 }
 
 html > body #menu {
+}
+
+#menu {
+  margin: 16px 0px;
+  width: 50%;
+  padding: 24px 0px 0px 0px;
+  background-color: #ffffff;
+  font-size: 16px;
+  color: black;
+  text-align: right;
 }
 
 #menu ul {
   margin: 0px;
   padding: 0px;
   list-style: none;
+  display: inline-block;
 }
 
 #menu li {
@@ -142,18 +149,39 @@ html > body #menu {
 
 #content {
   margin: auto;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-left: 0px solid #5e5945;
+  border-right: 0px solid #5e5945;
+  display: flex;
+  justify-content: space-between;
+}
+
+#main {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
   padding: 32px;
   background-color: #ffffff;
   border-left: 0px solid #5e5945;
   border-right: 0px solid #5e5945;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-#content h2 {
+#leftNow {
+  vertical-align: center;
+  margin-top: 0px;
+  padding-right: 32px;
+  width: 256px;
+  border: 0px dashed #5e5945;
+  background-color: #ffffff;
 }
 
-#rightNow {
-  float: right;
+.rightNow {
   margin: 16px 0px;
   padding: 24px 24px 0px 24px;
   width: 800px;
@@ -162,26 +190,13 @@ html > body #menu {
   box-shadow: 5px 10px #888888;
 }
 
+.svg {
+  float: left;
+  padding-right: 16px;
+}
+
 #svg {
   margin: 24px;
-}
-
-#leftNow {
-  float: left;
-  vertical-align: center;
-  margin-top: -700px;
-  padding: 10px;
-  width: 256px;
-  border: 0px dashed #5e5945;
-  background-color: #ffffff;
-}
-
-#right2 {
-  float: right;
-  margin: 5px 0px 10px 0px;
-  padding: 10px;
-  width: 150px;
-  border: 1px dashed #5e5945;
 }
 
 /** FOOTER */
@@ -193,7 +208,7 @@ html > body #menu {
 #footer p {
   margin: 0px auto;
   width: 100%;
-  padding: 10px 0px 10px 0px;
+  padding: 8px 0px 8px 0px;
   background-color: rgb(0, 0, 0);
   font-size: 12px;
   text-align: center;
@@ -203,7 +218,7 @@ html > body #menu {
 html > body #footer-menu {
 }
 #footer-menu {
-  margin: 0px 0px 0px 0px;
+  margin: 100px 0px 0px 0px;
   width: 100%;
   padding: 24px 0px 24px 0px;
   background-color: #f5e5ff;
@@ -292,7 +307,7 @@ html > body #footer-menu {
   margin-bottom: 16px;
 }
 
-#button1:hover {
+.button:hover {
   background-color: #d5ffe1;
   color: #001c08;
   box-shadow: 2px 5px #888888;
